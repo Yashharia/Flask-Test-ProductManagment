@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+<form method='POST' action="">
+	change
+	{{form.edit_location}}
+	To
+{{form.location_id }}
+<input type=submit value=edit>
+</form>
+</div>
+{% endblock %}
+

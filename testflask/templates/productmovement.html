@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{%block content%}
+<body>
+<table border=1>
+<thead>
+<tr>
+<td>From Location</td>
+<td>To Location</td>
+<td>Product</td>
+<td>Quantity</td>
+</tr>
+</thead>
+{% for movementDetails in movementDetails %}
+<tbody>
+<tr>
+<td>{{movementDetails.from_location}}</td>
+<td>{{movementDetails.to_location}}</td>
+<td>{{movementDetails.product_id}}</td>
+<td>{{movementDetails.quantity}}</td>
+
+</tr>
+</tbody>
+{% endfor %}
+{%endblock%}

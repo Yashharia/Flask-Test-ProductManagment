@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{%block content%}
+<body>
+<table border=1>
+<thead>
+<tr>
+<td>Location</td></tr>
+</thead>
+{% for locationDetails in locationDetails %}
+<tbody>
+<tr>
+<td>{{locationDetails.location_id}}</td>
+</tr>
+</tbody>
+{% endfor %}
+{%endblock%}

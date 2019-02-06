@@ -1,0 +1,38 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{%block content%}
+
+	{% for locationDetails in locationDetails%}
+	<table border=1>
+	<thead>
+		<td>{{locationDetails.location_id}}</td>
+	</thead>
+		<tr>
+			<td>Product</td>
+			<td>Warehouse</td>
+			<td>Quantity</td>
+		</tr>
+	{% for movementDetails in movementDetails%}
+	{% if movementDetails.to_location==locationDetails.location_id %}
+	<tbody>
+		<tr>
+			<td>
+				{{movementDetails.product_id}}
+			</td>
+			<td>
+				{{movementDetails.to_location}}
+			</td>
+			<td>
+				{{movementDetails.quantity}}
+			</td>
+		</tr>
+	</tbody>
+	{%endif%}
+	{%endfor%}
+</table>
+{%endfor%}
+{%endblock%}

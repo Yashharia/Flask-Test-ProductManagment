@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{%block content%}
+<form method='POST' action="">
+	from location
+	{{ form.from_location}}
+	To Locatiob
+	{{form.to_location }}
+	product id
+	{{form.product_idlist}}
+	quantity
+{{ form.quantity }}
+<input type=submit value=add>
+</form>
+{% endblock %}

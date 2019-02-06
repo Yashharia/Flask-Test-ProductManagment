@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{%block content%}
+<form method='POST' action="">
+	Change
+{{ form.edit_product }}
+TO
+{{ form.product_id }}
+<input type=submit value='edit'>
+</form>
+{%endblock%}

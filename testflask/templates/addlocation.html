@@ -1,0 +1,13 @@
+{% extends "bootstrap/base.html" %}
+
+{%block navbar%}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{% block scripts %}
+<form method='POST' action="">
+
+{{form.location_id}}
+<input type=submit value=add>
+</form>
+{% endblock %}}
