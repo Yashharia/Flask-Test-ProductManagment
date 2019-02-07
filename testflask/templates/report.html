@@ -5,9 +5,9 @@
 {% endblock %}
 
 {%block content%}
-
+<div class="container">
 	{% for locationDetails in locationDetails%}
-	<table border=1>
+	<table border=1 class="table">
 	<thead>
 		<td>{{locationDetails.location_id}}</td>
 	</thead>
@@ -35,4 +35,5 @@
 	{%endfor%}
 </table>
 {%endfor%}
+</div>
 {%endblock%}

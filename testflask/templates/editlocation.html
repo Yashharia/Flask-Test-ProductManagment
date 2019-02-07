@@ -6,13 +6,13 @@
 
 
 {% block content %}
-<div class="container">
+<div class="form-group container">
 <form method='POST' action="">
 	change
 	{{form.edit_location}}
 	To
 {{form.location_id }}
-<input type=submit value=edit>
+<input type=submit class='btn btn-primary' value=edit>
 </form>
 </div>
 {% endblock %}

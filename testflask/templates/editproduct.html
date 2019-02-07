@@ -5,11 +5,13 @@
 {% endblock %}
 
 {%block content%}
+<div class="form-group container">
 <form method='POST' action="">
 	Change
 {{ form.edit_product }}
 TO
 {{ form.product_id }}
-<input type=submit value='edit'>
+<input type=submit class='btn btn-primary' value='edit'>
 </form>
+</div>
 {%endblock%}

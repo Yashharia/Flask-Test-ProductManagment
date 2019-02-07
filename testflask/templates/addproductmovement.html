@@ -5,15 +5,24 @@
 {% endblock %}
 
 {%block content%}
+<div class="form-group container">
 <form method='POST' action="">
 	from location
 	{{ form.from_location}}
-	To Locatiob
+</br>
+</br>
+	To Location
 	{{form.to_location }}
+	</br>
+	</br>
 	product id
 	{{form.product_idlist}}
+	</br>
+	</br>
 	quantity
 {{ form.quantity }}
-<input type=submit value=add>
+</br>
+<input type=submit class='btn btn-primary' value=add>
 </form>
+</div>
 {% endblock %}
